@@ -79,3 +79,7 @@ class IsolatedRewardEngine:
         self.worker.join(timeout=5)
         if self.worker.is_alive():
             self.worker.terminate()
+
+
+# Alias for backwards compatibility
+RewardEngine = IsolatedRewardEngine
