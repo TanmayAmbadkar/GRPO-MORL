@@ -1,21 +1,21 @@
 #!/bin/bash
 # setup.sh
 
-# 1. Create Directory (Already handled if running this script from inside grpo_project, but for completeness)
-# mkdir -p grpo_project/src
-# cd grpo_project
-
-# 2. Create Conda Environment
+# 1. Create and Activate Environment
+# Using 3.10 as it's the most stable for Unsloth/Torch dependencies
 conda create --name grpo_env python=3.10 -y
 source $(conda info --base)/etc/profile.d/conda.sh
 conda activate grpo_env
 
-# 3. Install Pytorch (CUDA 12.1)
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
+# 2. Install Torch (CUDA 12.1)
+# Using pip ensures we get the exact wheel we need without conda channel conflicts.
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# 4. Install Unsloth (Core optimization)
+# 3. Install Unsloth & Core Dependencies
+# We removed flash-attn to avoid the build errors.
 pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
-
-# 5. Install Dependencies (TRL, Accelerate, etc.)
 pip install --no-deps "trl<0.9.0" peft accelerate bitsandbytes
-pip install datasets scipy tensorboard flash-attn protobuf
+pip install datasets scipy tensorboard protobuf rewardbench
+
+echo "Setup Complete without flash-attn. Unsloth will use PyTorch SDPA instead."
+echo "Activate with: 'conda activate grpo_env'"
