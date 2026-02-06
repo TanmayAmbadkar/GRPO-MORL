@@ -1,3 +1,7 @@
+import os
+# CRITICAL: Set CUDA visibility BEFORE any torch import to prevent Unsloth multi-GPU issues
+os.environ["CUDA_VISIBLE_DEVICES"] = "2,3"  # Only expose 2 GPUs
+
 import torch
 from unsloth import FastLanguageModel
 from datasets import load_dataset
@@ -36,15 +40,14 @@ from src.reward_engine import IsolatedRewardEngine
 # --- CONFIG ---
 # BASELINE: Fixed beta instead of adaptive Lagrangian
 BETA_KL = 0.1          # Fixed KL penalty coefficient
-GROUP_SIZE = 2         # Reduced from 4 to save memory (2 models on same GPU)
+GROUP_SIZE = 16         # Reduced from 4 to save memory (2 models on same GPU)
 MAX_STEPS = 500
-CLIP_EPS = 0.2         # PPO clip epsilon
 POLICY_DEVICE = "cuda:0"
 REF_DEVICE = "cuda:0"  # Same GPU - Unsloth has cross-device bug
 REWARD_DEVICE = "cuda:1"
-
 # Memory & Speed optimizations
-MAX_NEW_TOKENS = 64
+MAX_NEW_TOKENS = 2048
+CLIP_EPS = 0.2
 
 def main():
     # 1. Load Policy (GPU 0) - Uses Unsloth optimizations
@@ -79,7 +82,8 @@ def main():
         max_seq_length=1024,
         dtype=None,
         load_in_4bit=True,
-        device_map=REF_DEVICE
+        device_map=REF_DEVICE,
+        attn_implementation="flash_attention_2"
     )
     ref_model.eval()
 
@@ -88,7 +92,7 @@ def main():
     reward_engine = IsolatedRewardEngine(device=REWARD_DEVICE)
 
     # BASELINE: No Lagrangian beta - just fixed optimizer
-    optimizer = torch.optim.AdamW(model.parameters(), lr=5e-6)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=1e-6)
     
     # --- RUN DIRECTORY SETUP ---
     run_name = datetime.now().strftime("baseline_%Y%m%d_%H%M%S")

@@ -1,0 +1,61 @@
+Loading Reward Model on cuda:0 (BEFORE Unsloth)...
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+🦥 Unsloth Zoo will now patch everything to make training faster!
+🦥 Unsloth Zoo will now patch everything to make training faster!
+🦥 Unsloth Zoo will now patch everything to make training faster!
+Loading Policy on cuda:0...
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading Reference on cuda:0...
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+==((====))==  Unsloth 2026.1.4: Fast Llama patching. Transformers: 4.51.0.
+   \\   /|    NVIDIA A100 80GB PCIe. Num GPUs = 4. Max memory: 79.151 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.34. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading Dataset...
+Starting Pro Training Loop (G=16)...

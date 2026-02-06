@@ -17,7 +17,7 @@ from datetime import datetime
 
 # Configuration
 EVAL_PROMPTS = 50  # Number of prompts to evaluate
-MODEL_PATH = "principled_grpo_model"  # Path to trained model
+MODEL_PATH = "logs/run_20260206_133156/model"  # Path to trained model
 DEVICE = "cuda:0"
 REWARD_DEVICE = "cuda:2"
 

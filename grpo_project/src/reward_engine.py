@@ -29,9 +29,11 @@ def _reward_worker(device, model_id, input_queue, output_queue):
         inputs = tokenizer.apply_chat_template(
             pairs, return_tensors="pt", padding=True, truncation=True
         ).to(device)
+        # apply_chat_template returns a raw tensor (input_ids), create attention mask
+        attention_mask = (inputs != tokenizer.pad_token_id).long()
         
         with torch.inference_mode():
-            output = model(inputs)
+            output = model(input_ids=inputs, attention_mask=attention_mask)
             rewards = output.rewards[:, 0].cpu()
         
         output_queue.put(rewards)
